@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { SimulacaoTabsComponent } from './home/components/simulacao-tabs/simulacao-tabs.component';
+import {MatTabsModule} from '@angular/material/tabs'
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { MatCardModule } from '@angular/material/card';
     AppComponent,
     HeaderComponent,
     IndexComponent,
-    SimulacaoComponent
+    SimulacaoComponent,
+    SimulacaoTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
+    MatTabsModule
    
   ],
   providers: [],
