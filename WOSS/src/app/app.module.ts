@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/components/header/header.component';
 import { IndexComponent } from './home/pages/index/index.component';
 import { SimulacaoComponent } from './home/pages/simulacao/simulacao.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { SimulacaoComponent } from './home/pages/simulacao/simulacao.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
