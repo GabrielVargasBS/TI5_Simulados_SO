@@ -8,6 +8,8 @@ import { IndexComponent } from './home/pages/index/index.component';
 import { SimulacaoComponent } from './home/pages/simulacao/simulacao.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
    
   ],
   providers: [],
