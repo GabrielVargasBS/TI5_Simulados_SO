@@ -32,6 +32,17 @@
   >
     <input matSliderThumb />
   </mat-slider>
+  <p class="parametros">Tempo de I/O</p>
+  <mat-slider
+    min="0"
+    max="100000"
+    step="1000"
+    showTickMarks
+    discrete
+    [displayWith]="formatLabel"
+  >
+    <input matSliderThumb />
+  </mat-slider>
   <p class="parametros">Overhead</p>
   <mat-slider
     min="0"
