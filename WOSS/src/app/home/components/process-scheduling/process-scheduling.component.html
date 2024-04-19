@@ -1,0 +1,56 @@
+<mat-radio-group [(ngModel)]="selectedPolicy">
+    <mat-radio-button value="FIFO">FIFO</mat-radio-button>
+    <mat-radio-button value="SJF">SJF</mat-radio-button>
+    <mat-radio-button value="Priority">Priority</mat-radio-button>
+    <mat-radio-button value="RoundRobin">Round Robin</mat-radio-button>
+</mat-radio-group>
+  
+<button mat-raised-button (click)="simulate()" [disabled]="!selectedPolicy">Simular</button>
+  
+<h1>Ready Jobs ({{ readyJobs.length }})</h1>
+<div class="progress-bar-group">
+  <mat-progress-bar class="progress-bar-ready-jobs" *ngFor="let job of readyJobs" 
+    [id]="'progress-bar-' + job.id"
+    [value]="getPercentage(job)"
+    mode="determinate">
+  </mat-progress-bar>
+</div>
+
+<h1>Waiting Jobs ({{ waitingJobs.length }})</h1>
+<div class="progress-bar-group">
+  <mat-progress-bar class="progress-bar-waiting-jobs" *ngFor="let job of waitingJobs" 
+    [id]="'progress-bar-' + job.id"
+    [value]="getPercentage(job)"
+    mode="determinate">
+  </mat-progress-bar>
+</div>
+
+<h1>Finished Jobs ({{ finishedJobs.length }})</h1>
+<div class="progress-bar-group">
+  <mat-progress-bar class="progress-bar-finished-jobs" *ngFor="let job of finishedJobs" 
+    [id]="'progress-bar-' + job.id"
+    [value]="getPercentage(job)"
+    mode="determinate">
+  </mat-progress-bar>
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Priority</th>
+        <th>Arrival Time</th>
+        <th>Instructions</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let job of listAllJobs">
+        <td>{{ job.id }}</td>
+        <td>{{ job.priority }}</td>
+        <td>{{ job.arrivalTime | date:'short' }}</td>
+        <td>{{ job.instructionsStr.join(', ') }}</td>
+        <td>{{ job.status }}</td>
+      </tr>
+    </tbody>
+  </table>
