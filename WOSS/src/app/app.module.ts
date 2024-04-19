@@ -10,12 +10,16 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { SimulacaoTabsComponent } from './home/components/simulacao-tabs/simulacao-tabs.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { OpcoesComponent } from './home/components/opcoes/opcoes.component';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './home/components/modal/modal.component';
 import { MatIconModule } from "@angular/material/icon";
+import { ProcessSchedulingComponent } from './home/components/process-scheduling/process-scheduling.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { MatIconModule } from "@angular/material/icon";
     SimulacaoComponent,
     SimulacaoTabsComponent,
     OpcoesComponent,
-    ModalComponent
+    ModalComponent,
+    ProcessSchedulingComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,10 @@ import { MatIconModule } from "@angular/material/icon";
     MatTabsModule,
     MatSliderModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule,
+    FormsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
